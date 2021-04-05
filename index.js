@@ -5,10 +5,13 @@ function setup() {
 
 function draw() {
     if (mouseIsPressed) {
+        // push()
         stroke(0, 0, 0, 0);
         fill(255 * Math.random(), 255 * Math.random(), 255 * Math.random(), 255 * Math.random());
-        ellipse(mouseX, mouseY, 120 * Math.random(), 120 * Math.random());
-        // rotate(frameCount / 20)
+        translate(mouseX, mouseY)
+        rotate(2 * PI * Math.random())
+        ellipse(0, 0, 120 * Math.random(), 120 * Math.random());
+        // pop()
     } else {
         // fill(255);
     }
